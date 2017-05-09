@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starks Dice JS</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+	<script type="text/javascript">
+
+		var rollCounter = 0;
+
+		function rollDice() {
+
+			if(rollCounter <= 2) {
+
+				rollCounter += 1;
+				document.getElementById( "rolls" ).innerHTML = rollCounter;
+
+				var dice1 = document.getElementById( "dice1" );
+				var dice2 = document.getElementById( "dice2" );
+				var dice3 = document.getElementById( "dice3" );
+				var dice4 = document.getElementById( "dice4" );
+				var dice5 = document.getElementById( "dice5" );
+
+				var d1Math = Math.floor(Math.random() * 6) + 1 ;
+				var d2Math = Math.floor(Math.random() * 6) + 1 ;
+				var d3Math = Math.floor(Math.random() * 6) + 1 ;
+				var d4Math = Math.floor(Math.random() * 6) + 1 ;
+				var d5Math = Math.floor(Math.random() * 6) + 1 ;
+
+				dice1.innerHTML = d1Math;
+				dice2.innerHTML = d2Math;
+				dice3.innerHTML = d3Math;
+				dice4.innerHTML = d4Math;
+				dice5.innerHTML = d5Math;
+
+				button1.innerHTML = "Roll The Dice";
+				winner.innerHTML = " "
+			}
+
+			if(d1Math==d2Math && d2Math==d3Math && d3Math==d4Math && d4Math==d5Math) {
+
+				winner.innerHTML = "Winner Winner Tofu Dinner";
+				button.innerHTML = "Reset";
+			}
+
+			if(rollCounter == 3) {
+
+				winner.innerHTML = "Try Again";
+
+				document.getElementById("button1").style.display = "none";
+				document.getElementById("button2").style.display = "initial";
+
+			}
+
+		};
+
+		function resetGame() {
+
+			rollCounter = 0;
+			document.getElementById( "rolls" ).innerHTML = rollCounter;
+			
+			document.getElementById("button2").style.display = "none";
+			document.getElementById("button1").style.display = "initial";
+
+			var dice1 = document.getElementById( "dice1" );
+			var dice2 = document.getElementById( "dice2" );
+			var dice3 = document.getElementById( "dice3" );
+			var dice4 = document.getElementById( "dice4" );
+			var dice5 = document.getElementById( "dice5" );
+
+			dice1.innerHTML = 0;
+			dice2.innerHTML = 0;
+			dice3.innerHTML = 0;
+			dice4.innerHTML = 0;
+			dice5.innerHTML = 0;
+			
+		}
+
+	</script>
+
+</head>
+<body>
+
+<main>
+
+	<div id="roll-number">
+		<p>Roll Number: <span id="rolls">0</span></p>
+	</div>
+
+	<div id="roll-btn">
+		<button id="button1" onclick="rollDice()">Roll The Dice</button>
+		<button id="button2" onclick="resetGame()">Reset</button>
+	</div>
+
+		<div id="dice">
+			<div id="dice1" class="die">0</div>
+			<div id="dice2" class="die">0</div>
+			<div id="dice3" class="die">0</div>
+			<div id="dice4" class="die">0</div>
+			<div id="dice5" class="die">0</div>
+		</div>
+
+	<div id="winner"></div>
+
+</main>
+
+
+
+</body>
+</html>
+
+
+
+
+				

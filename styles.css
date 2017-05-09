@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+	max-width: 768px;
+	height: 500px;
+	border: 1px solid #333;
+	margin: 10px auto;
+}
+
+
+#roll-number {
+	margin: auto;
+}
+
+#rolls {
+	margin-left: 10px;
+}
+
+#roll-number p {
+	text-align: center;
+	padding: 10px 0;
+}
+
+#roll-btn {
+	text-align: center;
+}
+
+#roll-btn button {
+	padding: 5px;
+}
+
+#dice-wrapper {
+	text-align: center;
+	width: 100%;
+}
+
+#winner {
+	text-align: center;
+	margin-top: 20px;
+	width: 100%;
+}
+
+#dice {
+	text-align: center;
+	margin-top: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+.die {
+	display: inline-block;
+	width: 40px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 18px;
+	text-align: center;
+	border: 1px solid #888;
+	background-color: #eee;
+}
+
+.reset-button {
+	padding: 5px;
+	display: block;
+}
+
+#button2 {
+	display: none;
+}
